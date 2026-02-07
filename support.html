@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --bg: #0a0a0a;
+            --surface: #141414;
+            --border: #222;
+            --text: #e8e8e8;
+            --text-muted: #888;
+            --accent: #ff2d55;
+        }
+
+        body {
+            font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 60px 24px 100px;
+        }
+
+        .badge {
+            display: inline-block;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--accent);
+            border: 1px solid var(--accent);
+            border-radius: 20px;
+            padding: 6px 14px;
+            margin-bottom: 24px;
+        }
+
+        h1 {
+            font-size: 36px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            margin-bottom: 12px;
+        }
+
+        .subtitle {
+            font-size: 16px;
+            color: var(--text-muted);
+            margin-bottom: 48px;
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-bottom: 48px;
+        }
+
+        @media (max-width: 500px) {
+            .card-grid { grid-template-columns: 1fr; }
+        }
+
+        .card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+            transition: border-color 0.2s;
+        }
+
+        .card:hover {
+            border-color: #333;
+        }
+
+        .card-icon {
+            font-size: 28px;
+            margin-bottom: 12px;
+        }
+
+        .card h3 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .card p {
+            font-size: 14px;
+            color: var(--text-muted);
+            line-height: 1.5;
+        }
+
+        h2 {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 24px;
+        }
+
+        .faq-item {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 20px 24px;
+            margin-bottom: 12px;
+        }
+
+        .faq-item summary {
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-item summary::after {
+            content: "+";
+            font-size: 20px;
+            font-weight: 400;
+            color: var(--text-muted);
+            transition: transform 0.2s;
+        }
+
+        .faq-item[open] summary::after {
+            content: "−";
+        }
+
+        .faq-item summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .faq-answer {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-top: 12px;
+            padding-top: 12px;
+            border-top: 1px solid var(--border);
+            line-height: 1.6;
+        }
+
+        .contact-section {
+            margin-top: 56px;
+            padding-top: 48px;
+            border-top: 1px solid var(--border);
+        }
+
+        .contact-box {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 28px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .contact-box .email-icon {
+            font-size: 36px;
+            margin-bottom: 12px;
+        }
+
+        .contact-box p {
+            font-size: 15px;
+            color: var(--text-muted);
+            margin-bottom: 16px;
+        }
+
+        .contact-link {
+            display: inline-block;
+            font-size: 15px;
+            font-weight: 600;
+            color: #fff;
+            background: var(--accent);
+            padding: 12px 32px;
+            border-radius: 10px;
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+
+        .contact-link:hover {
+            opacity: 0.85;
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .footer {
+            text-align: center;
+            font-size: 13px;
+            color: #444;
+            margin-top: 80px;
+            padding-top: 32px;
+            border-top: 1px solid var(--border);
+        }
+
+        .footer a {
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="badge">Support</div>
+        
+        <h1>Audrexa Support</h1>
+        <p class="subtitle">Get help with your hi-res music player. We're here to help.</p>
+
+        <div class="card-grid">
+            <div class="card">
+                <div class="card-icon">🎵</div>
+                <h3>Supported Formats</h3>
+                <p>FLAC, ALAC, WAV, AIFF, MP3, AAC, M4A, OGG, and more.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🎧</div>
+                <h3>Hi-Res Audio</h3>
+                <p>Supports up to 24-bit / 192kHz playback for studio-quality sound.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🔒</div>
+                <h3>100% Private</h3>
+                <p>All music stays on your device. No data is ever sent to any server.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🎛️</div>
+                <h3>10-Band EQ</h3>
+                <p>34 presets plus manual control to shape your sound perfectly.</p>
+            </div>
+        </div>
+
+        <h2>Frequently Asked Questions</h2>
+
+        <details class="faq-item">
+            <summary>How do I import music into the app?</summary>
+            <div class="faq-answer">
+                Tap the "+" button in the Library tab. You can import audio files from the Files app, iCloud Drive, or any connected storage. The app supports importing individual files or entire folders.
+            </div>
+        </details>
+
+        <details class="faq-item">
+            <summary>What audio formats are supported?</summary>
+            <div class="faq-answer">
+                The app supports all major audio formats including FLAC, ALAC, WAV, AIFF, MP3, AAC, M4A, OGG, and WMA. Hi-res files up to 24-bit/192kHz are fully supported.
+            </div>
+        </details>
+
+        <details class="faq-item">
+            <summary>How do I get album artwork?</summary>
+            <div class="faq-answer">
+                Open an album, tap the three-dot menu, and select "Fetch Artwork". The app will search for matching artwork online. You can also choose your own image from your photo library.
+            </div>
+        </details>
+
+        <details class="faq-item">
+            <summary>What does the quality badge mean?</summary>
+            <div class="faq-answer">
+                The badge on the Now Playing screen shows the audio quality of the current track. "Lossless" means CD quality (16-bit/44.1kHz), "Hi-Res" means studio quality (24-bit or higher sample rates), and "Ultra Hi-Res" means premium quality (176.4kHz or 192kHz).
+            </div>
+        </details>
+
+        <details class="faq-item">
+            <summary>Does the app use any data or require internet?</summary>
+            <div class="faq-answer">
+                The app works entirely offline for music playback. Internet is only used optionally for fetching album artwork and metadata. No personal data is ever collected or transmitted.
+            </div>
+        </details>
+
+        <details class="faq-item">
+            <summary>How do I restore my purchase?</summary>
+            <div class="faq-answer">
+                Go to Settings within the app and tap "Restore Purchases". This will restore any previous in-app purchases linked to your Apple ID.
+            </div>
+        </details>
+
+        <details class="faq-item">
+            <summary>The app is crashing or audio isn't playing correctly.</summary>
+            <div class="faq-answer">
+                Try closing and reopening the app. If the issue persists, make sure your audio files aren't corrupted by testing them in another player. If you continue experiencing issues, please contact us with details about the file format and your device model.
+            </div>
+        </details>
+
+        <div class="contact-section">
+            <h2>Still need help?</h2>
+            <div class="contact-box">
+                <div class="email-icon">✉️</div>
+                <p>Send us a message and we'll get back to you as soon as possible.</p>
+                
+                <a href="mailto:support@simplifiisolutions.com" class="contact-link">Contact Support</a>
+            </div>
+        </div>
+
+        <div class="footer">
+            
+            <p>&copy; 2026 Audrexa &middot; <a href="privacy-policy.html">Privacy Policy</a></p>
+        </div>
+    </div>
+</body>
+</html>
